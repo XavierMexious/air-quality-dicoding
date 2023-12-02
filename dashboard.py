@@ -6,7 +6,8 @@ from babel.numbers import format_currency
 from sklearn.ensemble import IsolationForest
 sns.set(style='dark')
 
-all_df = pd.read_csv("all_air_quality_data.csv")
+url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQTcwsuCjwd0SPQzb1ks6K9Gh26MOhhY_m-2yyQ0JeE_SOeEGT2F1wgiFVEdX50C3sIQY9r4wbpIQ7u/pub?gid=1662792157&single=true&output=csv"
+all_df = pd.read_csv(url)
 
 # Create a datetime column from 'year', 'month', 'day', and 'hour'
 all_df['date'] = pd.to_datetime(all_df[['year', 'month', 'day', 'hour']])
